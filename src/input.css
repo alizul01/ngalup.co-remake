@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    font-family: 'inter', sans-serif;
+}
+
+@layer components {
+    .btn {
+        @apply focus:ring-4 focus:outline-none focus:ring-offset-teal-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0;
+    }
+    .btn-primary {
+        @apply text-white bg-primary hover:bg-opacity-95 dark:bg-white dark:hover:bg-primary dark:focus:ring-blue-800;
+    }
+    .nav-mobile {
+        @apply flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium;
+    }
+    .nav-content-current {
+        @apply block py-2 pr-4 pl-3 text-white bg-primary rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white;
+    }
+    .nav-content {
+        @apply block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700;
+    }
+    .search {
+        @apply block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+    }
+}
